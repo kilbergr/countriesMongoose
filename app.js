@@ -2,7 +2,8 @@ var express = require("express"),
 methodOverride = require("method-override"),
 bodyParser = require("body-parser"),
 app = express(),
-db = require("./models");
+db = require("./models"),
+fs = require('fs');
 
 //middleware
 app.set("view engine", "ejs");
