@@ -1,0 +1,13 @@
+<% include partials/header %>
+<div><h2>Welcome to the <%= country.name %> country page!</h2></div>
+<div>The capital of <%= country.name %> is <%= country.capital %></div>
+<div>There are <%= country.pop %> people living in <%= country.name %>.</div>
+<div>
+	<img height="100px" src="<% country.flag %>">
+	
+</div>
+<div>Some cities: <%= country.cities %></div>
+
+
+
+<% include partials/footer %>

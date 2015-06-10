@@ -1,0 +1,33 @@
+<% include partials/header %>
+<h2>Add Country Information</h2>
+<form action="/countries" method="POST">
+	<div>
+		<label for="country">Country Name
+			<input type="text" name="country[name]" autofocus>
+		</label>
+	</div>
+	<div>
+		<label for="pop">Population
+			<input type="text" name="country[pop]">
+		</label>
+	</div>
+	<div>
+		<label for="capital">Capital
+			<input type="text" name="country[capital]">
+		</label>
+	</div>
+	<div>
+		<label for="flag">Flag (please post jpg)
+			<input type="text" name="country[flag]">
+		</label>
+	</div>
+	<div>
+		<label for="cities">Cities
+			<input type="text" name="country[cities]">
+		</label>
+	</div>
+	<input type="submit" value="Add">
+</form>
+<a href="/countries">Return to Main Page</a>
+
+<% include partials/footer %>
