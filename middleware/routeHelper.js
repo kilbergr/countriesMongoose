@@ -11,7 +11,7 @@ var routeHelpers = {
 	},
 
 	ensureCorrectUser: function(req, res, next){
-		db.country.findById(req.params.id, function(err, country){
+		db.Country.findById(req.params.id, function(err, country){
 			if(country.ownerId !== req.session.id){
 				res.redirect('/countries');
 			}

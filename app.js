@@ -107,7 +107,7 @@ app.get("/countries/:id", routeMiddleware.ensureLoggedIn, function(req, res){
 })
 
 //edit form
-app.get("/countries/:id/edit", routeMiddleware.ensureLoggedIn, function(req, res){
+app.get("/countries/:id/edit", routeMiddleware.ensureLoggedIn, routeMiddleware.ensureCorrectUser, function(req, res){
 	db.Country.findById(req.params.id, function(err, foundCountry){
 		if(err){
 			res.render('errors/404')
@@ -118,7 +118,7 @@ app.get("/countries/:id/edit", routeMiddleware.ensureLoggedIn, function(req, res
 	});
 });
 //update edits
-app.put("/countries/:id", routeMiddleware.ensureLoggedIn, function(req, res){
+app.put("/countries/:id", routeMiddleware.ensureLoggedIn,  function(req, res){
 	db.Country.findByIdAndUpdate(req.params.id, req.body.country, function(err, foundCountry){
 		if(err){
 			res.render('errors/404')
@@ -130,7 +130,7 @@ app.put("/countries/:id", routeMiddleware.ensureLoggedIn, function(req, res){
 });
 
 //remove country
-app.delete("/countries/:id", routeMiddleware.ensureLoggedIn, function(req, res){
+app.delete("/countries/:id", routeMiddleware.ensureLoggedIn, routeMiddleware.ensureCorrectUser, function(req, res){
 	db.Country.findByIdAndRemove(req.params.id, function(err, foundCountry){
 		if(err){
 			res.render('errors/404');
