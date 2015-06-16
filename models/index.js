@@ -7,3 +7,4 @@
 		mongoose.set('debug', true);
 
 module.exports.Country = require("./country");
+module.exports.User = require("./user")
