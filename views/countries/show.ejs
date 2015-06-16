@@ -1,12 +1,12 @@
 <% include ../partials/header %>
-<div><h2>Welcome to the <%= country.name %> country page!</h2></div>
-<div>The capital of <strong><%= country.name %></strong> is <strong><%= country.capital %></strong>.</div>
-<div>There are <strong><%= country.pop %></strong> people living in <%= country.name %>.</div>
-<div>
-	Here's the flag of <%= country.name %> (theoretically): <img src="<%= country.flag %>" height="100px">
-	If you can't see it, click <a href="<%=country.flag%>">here</a> to take a look.
+<div><h1>Welcome to the <%= country.name %> country page!</h1></div>
+<div class="transparent">The capital of <strong><%= country.name %></strong> is <strong><%= country.capital %></strong>.</div>
+<div class="transparent">There are <strong><%= country.pop %></strong> people living in <%= country.name %>.</div>
+<div class="transparent">
+	Here's the flag of <%= country.name %>: <img src="<%= country.flag %>" height="100px">
+	If you can't see it, click <a href="<%=country.flag%>">here</a>.
 </div>
-<div>Some cities: <%= country.cities %></div>
+<div class="transparent">Some cities: <%= country.cities %></div>
 <a href="/countries">Return to Main Page</a>
 
 

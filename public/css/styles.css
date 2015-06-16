@@ -1,0 +1,58 @@
+body{
+	background: url(https://www.brandwatch.com/wp-content/uploads/2014/12/cartenewsletter.jpg) no-repeat fixed center;
+	text-align: center;
+	font-size: 32px;
+	font-family: 'PT Sans'
+}
+
+h1{
+	font-family: 'Playball';
+	background-color: white;
+	opacity: 0.7;
+}
+
+.transparent{
+	background-color: white;
+	opacity: 0.7;
+}
+
+.table{
+	text-align: center;
+	margin-left: 160px;
+}
+
+th{
+	font-family: 'Playball';
+	font-size: 32px;
+	padding: 10px;
+	text-align: center;
+	background-color: white;
+	opacity: 0.7;
+
+}
+.opaque{
+	opacity: 1;
+	background-color: transparent;
+}
+img {
+	border: 2px black solid;
+}
+
+td{
+	font-size: 24px;
+	background-color: white;
+	opacity: 0.7;
+}
+
+button{
+	font-family: 'Playball';
+	font-size: 18px;
+	border-radius: 3px;
+}
+
+a {
+	color: green;
+		background-color: white;
+		opacity: 0.7;
+
+}
